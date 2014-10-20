@@ -53,7 +53,7 @@
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
 							<a class="" href="#"><img src="assets/lennon/img/header/main.png"></a>
 						</button>
-						<a class="navbar-brand" href="index.html"><img src="assets/lennon/img/header/main.png"></a>
+						<a class="navbar-brand" href="#home"><img src="assets/lennon/img/header/main.png"></a>
 						<h4>連儂牆香港</h4>
 						<p>
 							請支持香港民主
@@ -72,16 +72,16 @@
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 							<li class="active">
-								<a href="post.html">看連儂牆</a>
+								<a href="#posts">看連儂牆</a>
 							</li>
 							<li >
-								<a href="write.html">寫在連儂牆</a>
+								<a href="#write">寫在連儂牆</a>
 							</li>
 							<li>
-								<a href="idea.html">目的</a>
+								<a href="#goal">目的</a>
 							</li>
 							<li>
-								<a href="workgroup.html">工作單位</a>
+								<a href="#workgroup">工作單位</a>
 							</li>
 							<li>
 								<div class="btn-group">
@@ -105,19 +105,18 @@
 				<!--/.container-fluid -->
 			</div>
 
-			<!-- Main component for a primary marketing message or call to action -->
-			<div class="main">
-				<div class="" id="submenu">
-					<div class="col-xs-4 col-md-offset-2 col-sm-offset-2 text-right nomargin-right">
-						<!-- <button type="button" class="btn btn-tranparent btn-sub active" data-toggle="modal" data-target="#StartModal"><img src="assets/lennon/img/icons/read-small.png"> -->
-							<a class="btn btn-tranparent btn-sub active" href="post.html"><img src="assets/lennon/img/icons/read-small.png">
-						</a>
-					</div>
-					<div class="col-xs-4 nomargin-left">
-						<a class="btn btn-tranparent btn-sub" href="write.html"><img src="assets/lennon/img/icons/write-small.png">
-						</a>
-					</div>
+			<div class="" id="submenu">
+				<div class="col-xs-4 col-md-offset-2 col-sm-offset-2 text-right nomargin-right">
+					<!-- <button type="button" class="btn btn-tranparent btn-sub active" data-toggle="modal" data-target="#StartModal"><img src="assets/lennon/img/icons/read-small.png"> -->
+					<a class="btn btn-tranparent btn-sub active" href="#posts"><img src="assets/lennon/img/icons/read-small.png"> </a>
 				</div>
+				<div class="col-xs-4 nomargin-left">
+					<a class="btn btn-tranparent btn-sub" href="#write"><img src="assets/lennon/img/icons/write-small.png"> </a>
+				</div>
+			</div>
+
+			<!-- Main component for a primary marketing message or call to action -->
+			<div id="posts" class="main page">
 				<div id="post" role="main">
 
 					<ul id="tiles">
@@ -350,13 +349,103 @@
                         </div>
 				</div>
 			</div>
+
+
+			<div id="goal" class="nocounter main page">
+				<!-- Main component for a primary marketing message or call to action -->
+				<div class="darkwrapper">
+
+					Idea
+				</div>
+			</div>
+			
+
+			<div id="workgroup" class="nocounter main page">
+				<!-- Main component for a primary marketing message or call to action -->
+				
+				<div class="darkwrapper">
+
+					Workgroup
+				</div>
+			</div>
+
+
+			<div id="home" class="main page active">
+
+				<div class="row" id="indexContent">
+					<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+						<a class="btn btn-lennon-main" href="#posts">
+
+							<div class="menu-img-holder"><img src="assets/lennon/img/icons/read.png">
+							</div>
+							<div class="menu-holder">
+								<h3>看</h3>
+								<h4>連儂牆</h4>
+							</div>
+							<!-- <div> -->
+							<div class="sub-box">
+								<h5>最新留言</h5>
+								<div class="msg">
+
+									<p class="msg-content">
+										Coming soon
+									</p>
+									<p class="name">
+										from Mr. User
+									</p>
+								</div>
+								<div class="msg">
+
+									<p class="msg-content">
+										Coming soon
+									</p>
+									<p class="name">
+										from Mr. User
+									</p>
+								</div>
+							</div>
+							<!-- </div> -->
+						</a>
+					</div>
+					<div class="middleline">
+						<img src="assets/lennon/img/others/middleline.png">
+					</div>
+					<div class="col-md-4 col-sm-4">
+
+						<a class="btn btn-lennon-main" href="#write">
+							<div class="menu-img-holder ">
+								<img src="assets/lennon/img/icons/write.png">
+							</div>
+							<div class="menu-holder">
+								<h3>寫</h3>
+								<h4>在連儂牆</h4>
+							</div>
+							<div class="sub-box">
+
+								<div class="msg">
+									<h5>總留言</h5>
+									<h6 class="num-content">00000</h6>
+								</div>
+								<div class="msg">
+									<h5>總瀏覽</h5>
+									<h6 class="num-content">00000</h6>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+
+
 			<div class="footer">
 				<div class="row  text-center">
 					<div class="col-md-12">
 						<div class="btn-group">
-							<a class="btn btn-tranparent" href="idea.html">目的</a>
+							<a class="btn btn-tranparent" href="#goal">目的</a>
 
-							<a class="btn btn-tranparent" href="workgroup.html">工作單位</a>
+							<a class="btn btn-tranparent" href="#workgroup">工作單位</a>
 
 							<div class="btn-group">
 								<button type="button" class="btn btn-tranparent dropdown-toggle" data-toggle="dropdown">
@@ -379,7 +468,7 @@
 			<!-- Button trigger modal -->
 
 			<!-- Modal -->
-			<div class="modal fade" id="StartModal" tabindex="-1" role="dialog" data-keyboard="true" aria-hidden="true">
+			<!-- <div class="modal fade" id="StartModal" tabindex="-1" role="dialog" data-keyboard="true" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -401,7 +490,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -410,6 +499,7 @@
 		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<!-- Custom styles for this template -->
 		<script src="assets/lennon/js/lennon.js"></script>
+		<script src="assets/lennon/js/router.js"></script>
 		<script src="assets/lennon/js/odometer.min.js"></script>
 
 		<script>
@@ -428,6 +518,14 @@
 			ga('create', 'UA-55847719-1', 'auto');
 			ga('send', 'pageview');
 
+			$(window).on('hashchange', function() {
+
+				updateRoute();
+
+			});
+
+			updateRoute();
+			
 		</script>
 
 		<!-- Include the imagesLoaded plug-in -->
@@ -464,9 +562,15 @@
 
 			})(jQuery);
 
-			setTimeout(function() {
-				odometer.innerHTML = 30000;
-			}, 300);
+			// setTimeout(function() {
+			// 	odometer.innerHTML = 30000;
+			// }, 300);
+
+
+
+
+
+
 		</script>
 	</body>
 </html>

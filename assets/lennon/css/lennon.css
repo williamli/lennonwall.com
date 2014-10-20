@@ -51,9 +51,8 @@ body.index .row{
 	text-align: left !important;
 }
 #indexContent {
-	position: absolute;
-	top: 300px;
-	margin-top: -220px;
+	
+	margin-top: 50px;
 }
 
 .postContent {
@@ -661,7 +660,8 @@ text-align:center;
 	 padding-bottom: 30px;
 	 vertical-align:middle;*/
 	height: 40px;
-	border: }
+	/*border: */
+}
 
 	/* int-tel-input */
 
@@ -1088,4 +1088,14 @@ text-align:center;
 	/*.actionbar {
 	 width: 1090px !important;
 	 }*/
+}
+
+
+.page {
+	display: none;
+}
+
+.page.active
+{
+	display: block;
 }
