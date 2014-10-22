@@ -27,12 +27,14 @@ function routeTo(hash)
 	
 
 
-
+	$('body').removeClass('index');
+	
 	setActivePage(hash);
 
 	if (hash == 'routeHome')
 	{
 		$('#submenu').hide();
+		$('body').addClass('index');
 	}
 	else if (hash == 'routeWorkgroup')
 	{
