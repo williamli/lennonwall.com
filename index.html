@@ -12,6 +12,8 @@
 
 		<!-- Custom styles for this template -->
 		<link href="assets/lennon/css/lennon.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/lennon/css/odometer-theme-minimal.css" />
+		<link rel="stylesheet" href="assets/wookmark/css/style.css">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,7 +34,7 @@
 		<meta property="fb:admins" content="654455109"/>
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" id="mainContainer">
 
 			<!-- header navbar -->
 			<!-- <div class="header navbar navbar-default text-center" role="navigation">
@@ -49,35 +51,342 @@
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-							<a class="" href="#"><img src="assets/lennon/img/header/main.png"></a>
+							<img src="assets/lennon/img/header/main.png">
 						</button>
-						<a class="navbar-brand"  href="/"><img src="assets/lennon/img/header/main.png"></a>
-						<h4>連儂牆香港</h4>
+						<a class="navbar-brand" href="#routeHome"><img src="assets/lennon/img/header/main.png"></a>
+						<h4>
+							<span class="lang_zh">連儂牆香港</span>
+							<span class="lang_en">Lennon Wall HK</span>
+						</h4>
 						<p>
-							請支持香港民主
+							<span class="lang_zh">請支持香港民主</span>
+							<span class="lang_en">Please support democracy in Hong Kong.</span>
 						</p>
-						
-						
+
+						<div class="counter" style="display: none;">
+							<div class="msg">
+								<h5>
+									<span class="lang_zh">總留言</span>
+									<span class="lang_en">Total Messages</span>
+								</h5>
+
+								<div id="odometer" class="odometer">
+									<h6 class="num-content">123</h6>
+								</div>
+							</div>
+						</div>
 					</div>
-					
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="routePosts">
+								<a href="#routePosts">
+									<span class="lang_zh">看連儂牆</span>
+									<span class="lang_en">Read Lennon Wall</span>
+								</a>
+							</li>
+							<li class="routeWrite active">
+								<a href="#routeWrite">
+									<span class="lang_zh">寫在連儂牆</span>
+									<span class="lang_en">Write On Lennon Wall</span>
+								</a>
+							</li>
+							<li class="routeGoal">
+								<a href="#routeGoal">
+									<span class="lang_zh">目的</span>
+									<span class="lang_en">Goal</span>
+								</a>
+							</li>
+							<li class="routeWorkgroup">
+								<a href="#routeWorkgroup">
+									<span class="lang_zh">工作單位</span>
+									<span class="lang_en">Supporting Parties</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<div class="lang-switcher" onclick="toggleLang()">
+										<span class="lang_en">中文</span>
+										<span class="lang_zh">English</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
+				</div>
+				<!--/.container-fluid -->
 			</div>
 
-			<div class="nocounter main">
+			<div class="hidden-xs" id="submenu">
+				<div class="col-xs-4 col-md-offset-2 col-sm-offset-2 text-right nomargin-right">
+					<!-- <button type="button" class="btn btn-tranparent btn-sub active" data-toggle="modal" data-target="#StartModal"><img src="assets/lennon/img/icons/read-small.png"> -->
+					<a id="submenuPost" class="btn btn-tranparent btn-sub" href="#routePosts"><img src="assets/lennon/img/icons/read-small.png"> </a>
+				</div>
+				<div class="col-xs-4 nomargin-left">
+					<a id="submenuWrite" class="btn btn-tranparent btn-sub" href="#routeWrite"><img src="assets/lennon/img/icons/write-small.png"> </a>
+				</div>
+			</div>
+
+			<!-- Main component for a primary marketing message or call to action -->
+			<div id="routePosts" class="main page">
+				<div id="post" role="main">
+
+					<ul id="tiles">
+						<!-- These are our grid blocks -->
+						
+						
+					</ul>
+
+                    
+				</div>
+				<div id="moreBar" class="btn-lennon-yellowborder-row">
+                	<button type="button" class="btn btn-lennon-yellowborder" onclick="moreHandler()">
+                		<span class="lang_zh">更多留言</span>
+                		<span class="lang_en">MORE</span>
+					</button>
+                </div>
+				<div class="loader" class="row">
+  			
+					<div class="col-xs-12">
+						<div class="spinner"></div>
+						<div class="text"><span class="lang_en">loading...</span><span class="lang_zh">下載中...</span></div>
+					</div>
+				  
+				</div>
+			</div>
+
+
+			<div id="routeGoal" class="nocounter main page">
 				<!-- Main component for a primary marketing message or call to action -->
-				
 				<div class="darkwrapper" style="text-align: center; font-size: 24px; padding-top: 100px; padding-bottom: 100px; margin-top: 50px;">
-					<p>讓關愛, 祈望和祝願填滿香港連儂牆. 開發即將完成, 敬請密切留意!</p>
-					<p>The Lennon Wall Hong Kong exists for thoughts, prayers, wishes and futures of HK.<br/>
-					We are working hard to bring this online so bookmark, share, and check back with us soon!<br/></p>
+					<span class="lang_zh">本部分即將開發完成, 敬請密切留意!</span>
+					<span class="lang_en">
+					We are working hard to bring this part of the site online soon. Please bookmark, share, and check back with us soon!<br/></span>
 							
+				</div>
+				<div class="darkwrapper">
+					<span class="lang_zh">Idea (Chinese)</span>
+					<span class="lang_en">Idea</span>
 				</div>
 			</div>
 			
 
+			<div id="routeWorkgroup" class="nocounter main page">
+				<!-- Main component for a primary marketing message or call to action -->
+				<div class="darkwrapper" style="text-align: center; font-size: 24px; padding-top: 100px; padding-bottom: 100px; margin-top: 50px;">
+					<span class="lang_zh">本部分即將開發完成, 敬請密切留意!</span>
+					<span class="lang_en">
+					We are working hard to bring this part of the site online soon. Please bookmark, share, and check back with us soon!<br/></span>
+							
+				</div>
+				<div class="darkwrapper">
+					<span class="lang_zh">Workgroup (Chinese)</span>
+					<span class="lang_en">Workgroup</span>
+				</div>
+			</div>
+
+			<div id="routeWrite" class="main page">
+				<!-- Main component for a primary marketing message or call to action -->
+				<div class="darkwrapper" style="text-align: center; font-size: 24px; padding-top: 100px; padding-bottom: 100px; margin-top: 50px;">
+					<span class="lang_zh">本部分即將開發完成, 敬請密切留意!</span>
+					<span class="lang_en">
+					We are working hard to bring this part of the site online soon. Please bookmark, share, and check back with us soon!<br/></span>
+							
+				</div>
+
+				<div class="darkwrapper">
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="active">
+							<a href="#social" role="tab" data-toggle="tab">使用 Facebook 或 Intagram 分享相片</a>
+						</li>
+						<li>
+							<a href="#webform" role="tab" data-toggle="tab">使用本網站留言</a>
+						</li>
+
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="social">
+							1.XXXXX
+							<br>
+							2.XXXXX
+							<br>
+							3. XXX
+							<br>
+						</div>
+						<div class="tab-pane " id="webform">
+							<div class="row">
+								<div class="col-xs-12 col-md-2 vertical-center">
+									你的姓名:
+								</div>
+								<div class="col-xs-12 col-md-4">
+									<input type="text" class="form-control" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-2 vertical-center">
+									你的電郵:
+								</div>
+								<div class="col-xs-12 col-md-4">
+									<input type="text" class="form-control" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-2 vertical-center">
+									你的留言:
+								</div>
+								<div class="col-xs-12 col-md-7">
+									<textarea  type="text" class="form-control"  rows="5"></textarea>																		
+									
+
+
+								</div>
+
+							</div>
+							<div class="row">
+								留言後,請留意你的電郵確認信件, 留言將會在你確認後出現。
+							</div>
+							<div class="row text-right">
+								<a class="btn btn-default " href="#">
+									取消
+								</a>
+								<a class="btn btn-lennon" href="write-sent.html">
+									送出
+								</a>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div id="routeHome" class="main page active">
+
+				<div class="row" id="indexContent">
+					<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+						<a class="btn btn-lennon-main" href="#routePosts">
+
+							<div class="menu-img-holder"><img src="assets/lennon/img/icons/read.png">
+							</div>
+							<div class="menu-holder">
+								<h3>
+									<span class="lang_zh">看</span>
+									<span class="lang_en">READ</span>
+								</h3>
+								<h4>
+									<span class="lang_zh">連儂牆</span>
+									<span class="lang_en">Lennon Wall</span>
+								</h4>
+							</div>
+							<!-- <div> -->
+							<!-- <div class="sub-box">
+								<h5>最新留言</h5>
+								<div class="msg">
+
+									<p class="msg-content">
+										Coming soon
+									</p>
+									<p class="name">
+										from Mr. User
+									</p>
+								</div>
+								<div class="msg">
+
+									<p class="msg-content">
+										Coming soon
+									</p>
+									<p class="name">
+										from Mr. User
+									</p>
+								</div>
+							</div> -->
+							<!-- </div> -->
+						</a>
+					</div>
+					<div class="middleline">
+						<!-- <img src="assets/lennon/img/others/middleline.png"> -->
+					</div>
+					<div class="col-md-4 col-sm-4">
+
+						<a class="btn btn-lennon-main" href="#routeWrite">
+							<div class="menu-img-holder ">
+								<img src="assets/lennon/img/icons/write.png">
+							</div>
+							<div class="menu-holder">
+								<h3>
+									<span class="lang_zh">寫</span>
+									<span class="lang_en">WRITE</span>
+								</h3>
+								<h4>
+									<span class="lang_zh">在連儂牆</span>
+									<span class="lang_en">on Lennon Wall</span>
+								</h4>
+							</div>
+							<!-- <div class="sub-box">
+
+								<div class="msg">
+									<h5>總留言</h5>
+									<h6 class="num-content">00000</h6>
+								</div>
+								<div class="msg">
+									<h5>總瀏覽</h5>
+									<h6 class="num-content">00000</h6>
+								</div>
+							</div> -->
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			
+
+			<div class="footer">
+				<div class="row  text-center">
+					<div class="col-md-12">
+						<div class="btn-group">
+							<a class="btn btn-tranparent" href="#routeGoal">
+								<span class="lang_zh">目的</span>
+								<span class="lang_en">Goal</span>
+							</a>
+
+							<a class="btn btn-tranparent" href="#routeWorkgroup">
+								<span class="lang_zh">工作單位</span>
+								<span class="lang_en">Supporting Parties</span>
+							</a>
+
+							<div class="btn btn-tranparent lang-switcher" onclick="toggleLang()">
+								<span class="lang_zh">English</span>
+								<span class="lang_en">中文</span>
+							</a>
+
+							<!-- <div class="btn-group">
+								<button type="button" class="btn btn-tranparent dropdown-toggle" data-toggle="dropdown">
+									中文 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href="#">中文</a>
+									</li>
+									<li>
+										<a href="#">English</a>
+									</li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
 			<!-- Button trigger modal -->
 
 			<!-- Modal -->
-			<div class="modal fade" id="StartModal" tabindex="-1" role="dialog" data-keyboard="true" aria-hidden="true">
+			<!-- <div class="modal fade" id="StartModal" tabindex="-1" role="dialog" data-keyboard="true" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -86,21 +395,46 @@
 							</button>
 						</div>
 						<div class="modal-body">
-
-							<div id="parameter"></div>
+							<h3 class="modal-title text-center" id="myModalLabel">
+							<br>
+							時代．由我們創造
+							<br>
+							連儂牆．即將啟動
+							<br>
+							LENNON WALL - LIFTING OFF SOON!
+							<br>
+							<br>
+							</h3>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
 		<!-- Custom styles for this template -->
-		<script src="assets/lennon/js/lennon.js"></script>
-		<script src="assets/lennon/js/odometer.min.js"></script>
+		<script src="/bower_components/momentjs/min/moment.min.js"></script>
+		<script src="/assets/lennon/js/lennon.js"></script>
+		<script src="/assets/lennon/js/router.js"></script>
+		<script src="/assets/lennon/js/api.js"></script>
+		<!-- <script src="/assets/lennon/js/odometer.min.js"></script> -->
+		<!-- Include the imagesLoaded plug-in -->
+		<script src="assets/wookmark/libs/jquery.imagesloaded.js"></script>
+
+		<!-- include magnific popup -->
+		<!-- <script src="assets/wookmark/libs/jquery.magnific-popup.min.js"></script> -->
+
+		<!-- Include the plug-in -->
+		<!-- <script src="assets/wookmark/libs/jquery.wookmark.js"></script> -->
+		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+		<link rel="stylesheet" href="bower_components/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+		<script src="bower_components/fancyBox/source/jquery.fancybox.pack.js"></script>
+		<script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+
 		<script>
 			(function(i, s, o, g, r, a, m) {
 				i['GoogleAnalyticsObject'] = r;
@@ -117,6 +451,16 @@
 			ga('create', 'UA-55847719-1', 'auto');
 			ga('send', 'pageview');
 
+			$(window).on('hashchange', function() {
+
+				updateRoute();
+
+			});
+
+			updateRoute();
+
+			setLang();
+			
 		</script>
 
 		

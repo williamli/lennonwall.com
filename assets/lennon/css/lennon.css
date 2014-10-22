@@ -362,7 +362,11 @@ h2 {
 	background-color: transparent;
 	border:3px solid #ffff33;
 	color: #ffff33;
-	width:95%;
+	width:100%;
+}
+.btn-lennon-yellowborder:hover {
+	background-color: #ffff33;
+	color: #000;
 }
 .btn-default {
 	padding: 10px 55px;
@@ -518,7 +522,7 @@ textarea.form-control {
 }
 /*footer */
 .footer {
-	margin-top: 15px;
+	margin-top: 30px;
 	vertical-align: middle;
 	height: 45px;
 }
@@ -1090,6 +1094,46 @@ text-align:center;
 	 }*/
 }
 
+.spinner {
+  width: 30px;
+  height: 30px;
+  background-color: #FFFF33;
+
+  margin: 20px auto;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+.loader
+{
+	margin-top: 50px;
+	margin-bottom: 100px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	height: 50px;
+	display: none;
+}
 
 .page {
 	display: none;
@@ -1098,4 +1142,119 @@ text-align:center;
 .page.active
 {
 	display: block;
+}
+
+#tiles .post-content img
+{
+	width: 100%;
+}
+
+.post {
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.post .frame {
+	/*height: 360px;*/
+	background-color: #F4F4F4;
+	padding: 3px;
+	/*border: 2px solid;*/
+    border-radius: 4px;
+}
+
+.post .frame:hover, .post:hover .frame {
+	background-color: #FFFF33;
+}
+
+.post .frame.selected
+{
+	background-color: #ffffe7;
+}
+
+.post .frame.instagram .photo, .post .frame.twitter .content .tweet-photo {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.post .frame.instagram .photo img, .post .frame.twitter .content .tweet-photo img {
+	width: 100%;	
+}
+
+.post .frame .title-bar {
+	margin-top: 2px;
+	height: 20px;
+}
+
+.post .frame .geo-bar {
+	margin-top: 2px;
+	height: 20px;
+	text-align: left;
+}
+
+.post .frame .geo-bar .geolocation, .post .frame .geo-bar .geolocation a
+{
+	color: #878787;
+	text-align: left;
+	font-size: 12px;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 3px;
+}
+
+
+
+.post .frame .title-bar .name, .post .frame .title-bar .name a {
+	float: left;
+	/*margin-left:2px;*/
+	color: #878787;
+	text-decoration: none;
+}
+
+.post .frame .title-bar .medium {
+	float: right;
+	margin-right: 3px;
+}
+
+.post .frame .content {
+	text-align: left;
+	color: #878787;
+	margin-bottom: 5px;
+	font-size: 11px;
+}
+
+.post .frame .calendar {
+	width: 11px;
+	margin-right: 5px;
+	position: relative;
+	top: -1px;
+}
+
+.post .frame .datetime {
+	text-align: left;
+	/*color: #CBCBCB;*/
+	color: #878787;
+	font-size: 12px;
+}
+
+.fancybox-skin .fancybox-title {
+	text-align: left;
+	padding: 5px;
+	padding-bottom: 10px;
+}
+
+.lang_en, .lang_zh
+{
+	display: none;
+}
+
+.lang_en.active, .lang_zh.active
+{
+	display: inline;
+}
+
+.lang-switcher span
+{
+	cursor: pointer;
 }
