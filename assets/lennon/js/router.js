@@ -28,7 +28,7 @@ function routeTo(hash)
 
 
 	$('body').removeClass('index');
-	
+
 	setActivePage(hash);
 
 	if (hash == 'routeHome')
@@ -71,6 +71,10 @@ function routeTo(hash)
 
 function updateRoute()
 {
+	ga('send', 'pageview', {
+	 'page': location.pathname + location.search  + location.hash
+	});
+	
 	var hash = location.hash.substring(1, location.hash.length);;
 				
 	console.log('hash: '+hash);
