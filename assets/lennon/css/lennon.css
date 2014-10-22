@@ -1258,3 +1258,9 @@ text-align:center;
 {
 	cursor: pointer;
 }
+
+#menuIcon
+{
+	font-size: 20px;
+	color: #FFFF33;
+}
