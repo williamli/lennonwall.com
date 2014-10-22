@@ -6,7 +6,7 @@ html, body, div {
 	font-family: "Arial Unicode MS", "Arial", "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", AppleGothic, Dotum, Lucida Grande, Verdana Sans-serif;
 }
 .index .main {
-	height: 75%;
+	/*height: 75%;*/
 }
 .main {
 	height: auto;
