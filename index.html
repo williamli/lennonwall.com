@@ -35,18 +35,6 @@
 	</head>
 	<body>
 		<div class="container" id="mainContainer">
-
-			<!-- header navbar -->
-			<!-- <div class="header navbar navbar-default text-center" role="navigation">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<img src="assets/lennon/img/header/main.png">
-			</button>
-			<a class="navbar-brand text-center" href="#"><img src="assets/lennon/img/header/main.png"></a>
-			<h4>連儂牆香港</h4>
-			<p>
-			請支持香港民主
-			</p>
-			</div> -->
 			<div class="navbar navbar-default" role="navigation">
 				<div class="container-fluid">
 					<div class="navbar-header">
@@ -55,7 +43,7 @@
 							<span id="menuIcon" class="glyphicon glyphicon-align-justify"></span>
 						</button>
 						<a class="mobile-navbar-brand visible-xs"><img src="assets/lennon/img/header/main.png"></a>
-						
+
 						<a class="navbar-brand" href="#routeHome"><img src="assets/lennon/img/header/main.png"></a>
 						<h4>
 							<span class="lang_zh">連儂牆香港</span>
@@ -388,32 +376,7 @@
 				
 			</div>
 
-			<!-- Button trigger modal -->
-
-			<!-- Modal -->
-			<!-- <div class="modal fade" id="StartModal" tabindex="-1" role="dialog" data-keyboard="true" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">
-								<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<h3 class="modal-title text-center" id="myModalLabel">
-							<br>
-							時代．由我們創造
-							<br>
-							連儂牆．即將啟動
-							<br>
-							LENNON WALL - LIFTING OFF SOON!
-							<br>
-							<br>
-							</h3>
-						</div>
-					</div>
-				</div>
-			</div> -->
+			
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -459,7 +422,9 @@
 			$(window).on('hashchange', function() {
 
 				updateRoute();
-
+				ga('send', 'pageview', {
+				 'page': location.pathname + location.search  + location.hash
+				});
 			});
 
 			updateRoute();
