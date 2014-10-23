@@ -22,6 +22,8 @@ var options = {
 	fillEmptySpace : false // Optional, fill the bottom of each column with widths of flexible height
 };
 
+var fetchUpdatesEnabled = false;
+
 var loadedMedia = [];
 
 $( document ).ready(function() {
@@ -90,7 +92,8 @@ function startTimer()
 		if (timeToUpdate == 0)
 		{
 			timeToUpdate = updateInterval;
-			fetchUpdates();
+			if (fetchUpdatesEnabled)
+				fetchUpdates();
 		}
 		
 	}, 1000);

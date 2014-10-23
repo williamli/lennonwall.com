@@ -1,4 +1,4 @@
-var activeRoute = 'home';
+var activeRoute = 'routeHome';
 
 function setActivePage(p)
 {
@@ -21,15 +21,22 @@ function routeTo(hash)
 		hash = 'routeHome';
 	}
 	
-
 	$('#submenu .active').removeClass('active');
-
 	
+	if (activeRoute == 'routeHome')
+	{
+		$('body').removeClass('index');
+	} else if (activeRoute == "routePosts")
+	{
+		// stop getting updates
+		fetchUpdatesEnabled = false;
+	}
 
 
-	$('body').removeClass('index');
 
 	setActivePage(hash);
+
+
 
 	if (hash == 'routeHome')
 	{
@@ -61,6 +68,8 @@ function routeTo(hash)
 			$dynamicHolder.masonry();
 		}
 
+		fetchUpdatesEnabled = true;
+
 	}
 	else if (hash == 'routeWrite')
 	{
@@ -74,7 +83,7 @@ function updateRoute()
 	ga('send', 'pageview', {
 	 'page': location.pathname + location.search  + location.hash
 	});
-	
+
 	var hash = location.hash.substring(1, location.hash.length);;
 				
 	console.log('hash: '+hash);
